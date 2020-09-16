@@ -2,32 +2,30 @@ package ui;
 
 import model.Task;
 import model.TaskCheck;
+import ui.tools.*;
 
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
-
+import java.util.ArrayList;
 import java.util.List;
-import ui.tools.*;
+import java.util.Map;
 
 
 public class SchedulerAppGUI extends JFrame {
-
 
     private static final int WIDTH = 950;
     private static final int HEIGHT = 500;
     public static final String DEFAULT = "--Select Option--";
     public static final String ADD = "Add Task";
     public static final String REMOVE = "Remove Task";
-
 
     public TaskCheck today;
     private JTextArea textArea;
